@@ -29,7 +29,6 @@ class BotL
   class Bot
     def initialize
       @token = '1495663141:AAFFpexoWNH-GJq1HlbIO3e3ObECgKnTeoI'
-      @select = Selector.new
       Telegram::Bot::Client.run(@token) do |bot|
         bot.listen do |bot_options|
           case bot_options.text
@@ -74,4 +73,33 @@ class BotL
       end
     end
   end
+  # begin method food
+  
 end # fin clase botl
+def food
+  @token = '1495663141:AAFFpexoWNH-GJq1HlbIO3e3ObECgKnTeoI'
+  @select = Selector.new
+  Telegram::Bot::Client.run(@token) do |bot|
+    bot.listen do |message|
+      case message.text
+      when 'food'
+        bot.api.send_message(chat_id: message.chat.id, text: 'Select what you want to eat')
+      when 'breakfast'
+        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))
+      when 'lunch'
+        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.lunch))
+      when 'dinner'
+        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.dinner))
+      when 'elevenses'
+        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.elevenses))
+      when 'inic'
+        bot.api.send_message(chat_id: message.chat.id,text: "volver al inicio #{BotL.new} ") 
+      when 'stop'
+        key_board = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
+        bot.api.send_message(chat_id: message.chat.id, text: "Thanks for use my recipes", reply_markup: key_board)
+      else
+        bot.api.send_message(chat_id: message.chat.id, text: "wrong entry")  
+      end
+    end
+  end
+end
