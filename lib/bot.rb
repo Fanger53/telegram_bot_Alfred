@@ -34,8 +34,8 @@ class Bot
     Telegram::Bot::Client.run(@token) do |bot| 
       bot.listen do|bot_options|
       case bot_options.text
-        when 'start' 
-          bot.api.send_message(chat_id: bot_options.chat.id, text: "Hello, #{bot_options.from.first_name},Im Alfred im here to help u have good diet,  ")
+        when 'english' 
+          bot.api.send_message(chat_id: bot_options.chat.id, text: "Hello, #{bot_options.from.first_name},Im Alfred im here to help u have good diet and decide what food select in fun way")
         when 'food'
           food
         when 'inic'
@@ -44,7 +44,7 @@ class Bot
           key_board = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
           bot.api.send_message(chat_id: bot_options.chat.id, text: "Thanks for use my cooking advices ", reply_markup: key_board)
         else 
-          bot.api.send_message(chat_id: bot_options.chat.id,text: "Wrong entry try to use start, /stop ") 
+          bot.api.send_message(chat_id: bot_options.chat.id,text: "Wrong entry try to use english, inic, food or  /stop ") 
       end
     end
   end
