@@ -6,20 +6,21 @@ class Bot_l
     @token = '1495663141:AAFFpexoWNH-GJq1HlbIO3e3ObECgKnTeoI'
     Telegram::Bot::Client.run(@token) do |bot| 
       bot.listen do|l_options|
-        bot.api.send_message(chat_id: l_options.chat.id,text:" Im alfred im here to help u")
+        bot.api.send_message(chat_id: l_options.chat.id,text:" Im alfred im here to help u what choose for to eat")
       case l_options.text
         when  '/start'
-          bot.api.send_message(chat_id: l_options.chat.id,text:"hello im alfred i can speak 2 languages u can select from English or Spanish, just use /English for english or /Spanish for spanish")
-        when 'english' 
+          bot.api.send_message(chat_id: l_options.chat.id,text:"hello im Alfred I can speak 2 languages for give u a better  u can select from English or Spanish, just use english or spanish words")
+        when 'english'
+          bot.api.send_message(chat_id: l_options.chat.id,text:"You select English languaje")
           bot.api.send_message(chat_id: l_options.chat.id,text:"You select English languaje #{ Bot.new}")
         when 'spanish'
           bot.api.send_message(chat_id: l_options.chat.id,text: "haz seleccionado Español")
-          bot.api.send_message(chat_id: l_options.chat.id,text: "haz seleccionado Español #{ Bot_s.new}")
+          bot.api.send_message(chat_id: l_options.chat.id,text: " #{ Bot_s.new}")
         when '/stop'
           key_board = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
-          bot.api.send_message(chat_id: l_options.chat.id, text: "i will go to the bed", reply_markup: key_board)
+          bot.api.send_message(chat_id: l_options.chat.id, text: "I will go to the bed", reply_markup: key_board)
         else 
-          bot.api.send_message(chat_id: l_options.chat.id,text: "Wrong entry try to use start, stop, english, spanish  ") 
+          bot.api.send_message(chat_id: l_options.chat.id,text: "Wrong entry try to use /start, /stop, english or spanish ") 
       end
     end
   end
@@ -34,7 +35,7 @@ class Bot
       bot.listen do|bot_options|
       case bot_options.text
         when 'start' 
-          bot.api.send_message(chat_id: bot_options.chat.id, text: "Hello, #{bot_options.from.first_name},Im Alfred im here to help u to have good diet, like the helper of mr wayne i always try to do the best")
+          bot.api.send_message(chat_id: bot_options.chat.id, text: "Hello, #{bot_options.from.first_name},Im Alfred im here to help u have good diet,  ")
         when 'food'
           food
         when 'inic'
