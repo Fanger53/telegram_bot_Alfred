@@ -41,6 +41,4 @@ class Selector
   def rand_select(meal)
     @meal_choise = meal.sample 
   end
-
-  
 end
