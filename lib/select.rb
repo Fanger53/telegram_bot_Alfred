@@ -1,7 +1,7 @@
 require_relative '../lib/bot'
 
 class Selector
-  attr_reader :breakfast, :lunch, :dinner, :elevenses 
+  attr_reader :breakfast, :lunch, :dinner, :elevenses
   def initialize
     @breakfast = ['https://www.youtube.com/watch?v=MuajFTgkoHw',
                   'https://www.youtube.com/watch?v=28GCv_C-SVI',
@@ -35,10 +35,10 @@ class Selector
                   'https://www.youtube.com/watch?v=RRCtxTTUZD8',
                   'https://www.youtube.com/watch?v=KmR3w42LQWM',
                   'https://www.youtube.com/watch?v=mdOqstPfm1w',
-                  'https://www.youtube.com/watch?v=0TRokMB9AnI'] 
+                  'https://www.youtube.com/watch?v=0TRokMB9AnI']
   end
 
   def rand_select(meal)
-    @meal_choise = meal.sample 
+    @meal_choise = meal.sample
   end
 end
