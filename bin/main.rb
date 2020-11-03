@@ -5,4 +5,4 @@ p 'Im alfred'
 
 
 
-Bot_l.new
+BotL.new
