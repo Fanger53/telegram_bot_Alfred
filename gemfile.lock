@@ -9,6 +9,7 @@ GEM
       descendants_tracker (~> 0.0.1)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
+    diff-lcs (1.4.4)
     equalizer (0.0.11)
     faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
@@ -16,6 +17,19 @@ GEM
     ice_nine (0.11.2)
     inflecto (0.0.2)
     multipart-post (2.1.1)
+    rspec (3.9.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+    rspec-core (3.9.3)
+      rspec-support (~> 3.9.3)
+    rspec-expectations (3.9.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.4)
     ruby2_keywords (0.0.2)
     telegram-bot-ruby (0.13.0)
       faraday
@@ -32,6 +46,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  rspec
   telegram-bot-ruby
 
 BUNDLED WITH
