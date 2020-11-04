@@ -61,6 +61,8 @@ you can find the bot in telegram with next name t.me/fanger53bot. after running 
 
 -inic: this command send u to the beginning of the bot 
 
+For the use of telegram u can downloaded from app store or Telegram have a web-telegram, just subscribe to telegram create an account and enjoy it "its free"
+
 **Enjoy!!**
 
 ## Built With
