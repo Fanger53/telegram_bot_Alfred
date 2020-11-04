@@ -15,12 +15,12 @@ class BotL
           bot.api.send_message(chat_id: l_options.chat.id, text: 'just use english or español keywords')
         when 'english'
           bot.api.send_message(chat_id: l_options.chat.id, text: 'You select English languaje')
-          bot.api.send_message(chat_id: l_options.chat.id, text: " #{Bot.new}")
+          english
         when 'español'
           bot.api.send_message(chat_id: l_options.chat.id, text: 'haz seleccionado Español')
-          bot.api.send_message(chat_id: l_options.chat.id, text: " #{BotS.new}")
+          spanish
         when 'inic'
-          bot.api.send_message(chat_id: l_options.chat.id, text: 'You can select aganin the language')
+          bot.api.send_message(chat_id: l_options.chat.id, text: 'You can select again the language')
         when '/stop'
           key_board = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
           bot.api.send_message(chat_id: l_options.chat.id, text: 'I will go to the bed', reply_markup: key_board)
@@ -30,9 +30,8 @@ class BotL
       end
     end
   end
-  # class bot
-  class Bot
-    def initialize
+  # begin method english
+    def english
       @token = '1495663141:AAFFpexoWNH-GJq1HlbIO3e3ObECgKnTeoI'
       Telegram::Bot::Client.run(@token) do |bot|
         bot.listen do |bot_options|
@@ -58,10 +57,9 @@ class BotL
         end
       end
     end
-  end
-  # begin class bot_s
-  class BotS
-    def initialize
+        # begin method spanish
+
+    def spanish
       @token = '1495663141:AAFFpexoWNH-GJq1HlbIO3e3ObECgKnTeoI'
       @select = Selector.new
       Telegram::Bot::Client.run(@token) do |bot|
@@ -85,40 +83,39 @@ class BotL
         end
       end
     end
-  end
-end
 
-def food
-  @token = '1495663141:AAFFpexoWNH-GJq1HlbIO3e3ObECgKnTeoI'
-  @select = Selector.new
-  Telegram::Bot::Client.run(@token) do |bot|
-    bot.listen do |message|
-      case message.text
-      when 'food'
-        bot.api.send_message(chat_id: message.chat.id, text: '..')
-      when 'breakfast'
-        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))
-      when 'desayuno'
-        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))
-      when 'lunch'
-        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.lunch))
-      when 'almuerzo'
-        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.lunch))
-      when 'dinner'
-        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.dinner))
-      when 'cena'
-        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.dinner))
-      when 'elevenses'
-        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.elevenses))
-      when 'onces'
-        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.elevenses))
-      when 'inic'
-        bot.api.send_message(chat_id: message.chat.id, text: "volver al inicio #{BotL.new} ")
-      when 'stop'
-        key_board = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
-        bot.api.send_message(chat_id: message.chat.id, text: 'Thanks for use my recipes', reply_markup: key_board)
-      else
-        bot.api.send_message(chat_id: message.chat.id, text: 'wrong entry')
+    def food
+    @token = '1495663141:AAFFpexoWNH-GJq1HlbIO3e3ObECgKnTeoI'
+    @select = Selector.new
+    Telegram::Bot::Client.run(@token) do |bot|
+      bot.listen do |message|
+        case message.text
+        when 'food'
+          bot.api.send_message(chat_id: message.chat.id, text: '..')
+        when 'breakfast'
+          bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))
+        when 'desayuno'
+          bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))
+        when 'lunch'
+          bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.lunch))
+        when 'almuerzo'
+          bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.lunch))
+        when 'dinner'
+          bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.dinner))
+        when 'cena'
+          bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.dinner))
+        when 'elevenses'
+          bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.elevenses))
+        when 'onces'
+          bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.elevenses))
+        when 'inic'
+          bot.api.send_message(chat_id: message.chat.id, text: "volver al inicio #{BotL.new} ")
+        when 'stop'
+          key_board = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
+          bot.api.send_message(chat_id: message.chat.id, text: 'Thanks for use my recipes', reply_markup: key_board)
+        else
+          bot.api.send_message(chat_id: message.chat.id, text: 'wrong entry')
+        end
       end
     end
   end
