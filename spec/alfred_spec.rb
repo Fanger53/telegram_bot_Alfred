@@ -1,5 +1,6 @@
+# rubocop: disable Metrics/BlockLength, Lint/BinaryOperatorWithIdenticalOperands
 require 'telegram/bot'
-require_relative '../lib/select.rb'
+require_relative '../lib/select'
 
 describe Selector do
   let(:select) { Selector.new }
@@ -118,3 +119,4 @@ describe Selector do
     end
   end
 end
+# rubocop: enable Metrics/BlockLength, Lint/BinaryOperatorWithIdenticalOperands

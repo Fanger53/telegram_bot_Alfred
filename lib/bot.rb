@@ -1,4 +1,4 @@
-# rubocop: disable Metrics/MethodLength,Metrics/CyclomaticComplexity,Metrics/AbcSize,Layout/LineLength, Metrics/BlockLength
+# rubocop: disable Metrics/MethodLength,Metrics/CyclomaticComplexity,Metrics/AbcSize,Layout/LineLength
 require 'telegram/bot'
 require_relative '../lib/select'
 # begin of class BotL
@@ -124,4 +124,4 @@ def food
   end
 end
 
-# rubocop: enable Metrics/MethodLength,Metrics/CyclomaticComplexity,Metrics/AbcSize,Layout/LineLength, Metrics/BlockLength
+# rubocop: enable Metrics/MethodLength,Metrics/CyclomaticComplexity,Metrics/AbcSize,Layout/LineLength

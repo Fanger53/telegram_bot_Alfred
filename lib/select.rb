@@ -1,7 +1,9 @@
+# rubocop: disable Metrics/MethodLength
 require_relative '../lib/bot'
-
+# class selector
 class Selector
   attr_reader :breakfast, :lunch, :dinner, :elevenses
+
   def initialize
     @breakfast = ['https://www.youtube.com/watch?v=MuajFTgkoHw',
                   'https://www.youtube.com/watch?v=28GCv_C-SVI',
@@ -9,8 +11,8 @@ class Selector
                   'https://www.youtube.com/watch?v=Iy3mUtlvw84',
                   'https://www.youtube.com/watch?v=l7NUssiZTPk',
                   'https://www.youtube.com/watch?v=V7vofXwkY0E',
-                  'https://www.youtube.com/watch?v=UIl_5rpi2lI'
-                ]
+                  'https://www.youtube.com/watch?v=UIl_5rpi2lI']
+
     @lunch = ['https://www.youtube.com/watch?v=QZK0bqfITnI',
               'https://www.youtube.com/watch?v=mhDJNfV7hjk',
               'https://www.youtube.com/watch?v=MBkcmuTTrbU',
@@ -26,8 +28,7 @@ class Selector
                'https://www.youtube.com/watch?v=mvSNjWDQCAE',
                'https://www.youtube.com/watch?v=4kLpo6TjTPU',
                'https://www.youtube.com/watch?v=_Bx9P32tdaM',
-               'https://www.youtube.com/watch?v=hVseiV8rbUw'
-              ]
+               'https://www.youtube.com/watch?v=hVseiV8rbUw']
 
     @elevenses = ['https://www.youtube.com/watch?v=Cqma4wBNG8s',
                   'https://www.youtube.com/watch?v=HxPYYMsR0RE',
@@ -42,3 +43,4 @@ class Selector
     @meal_choise = meal.sample
   end
 end
+# rubocop: enable Metrics/MethodLength
