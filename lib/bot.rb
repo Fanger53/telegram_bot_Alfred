@@ -8,12 +8,14 @@ class BotL
       bot.listen do |l_options|
         case l_options.text
         when '/start'
-          bot.api.send_message(chat_id: l_options.chat.id, text: 'Im alfred im here to help u what choose for to eat')
-          bot.api.send_message(chat_id: l_options.chat.id, text: 'I can speak 2 languages for give u a better u can select from English or Spanish,just use english or spanish words')
+          bot.api.send_message(chat_id: l_options.chat.id, text: 'Im Alfred, Im here to help u to choose  your food')
+          bot.api.send_message(chat_id: l_options.chat.id, text: 'I can speak 2 languages for give u a better service')
+          bot.api.send_message(chat_id: l_options.chat.id, text: 'u can select from English or Spanish')
+          bot.api.send_message(chat_id: l_options.chat.id, text: 'just use english or español keywords')
         when 'english'
           bot.api.send_message(chat_id: l_options.chat.id, text: 'You select English languaje')
           bot.api.send_message(chat_id: l_options.chat.id, text: " #{Bot.new}")
-        when 'spanish'
+        when 'español'
           bot.api.send_message(chat_id: l_options.chat.id, text: 'haz seleccionado Español')
           bot.api.send_message(chat_id: l_options.chat.id, text: " #{BotS.new}")
         when 'inic'
@@ -35,8 +37,13 @@ class BotL
         bot.listen do |bot_options|
           case bot_options.text
           when 'english'
-            bot.api.send_message(chat_id: bot_options.chat.id, text: "Hello, #{bot_options.from.first_name},Hey, I'm Alfred, I'm here to help u what food select in a fun way.use these keywords for using me: food for looking for a dish that u desire, inic for to go to the beginning")
+            bot.api.send_message(chat_id: bot_options.chat.id, text: "Hello, #{bot_options.from.first_name},I'm Alfred")
+            bot.api.send_message(chat_id: bot_options.chat.id, text: 'Im here to help u what food select in a fun way')
+            bot.api.send_message(chat_id: bot_options.chat.id, text: 'use this keyword for using me:')
+            bot.api.send_message(chat_id: bot_options.chat.id, text: 'food for looking for a dish that u desire')
+            bot.api.send_message(chat_id: bot_options.chat.id, text: 'inic for return to the beginning')
           when 'food'
+            bot.api.send_message(chat_id: bot_options.chat.id, text: 'options: breakfast, lunch, dinner or elevenses')
             food
           when 'inic'
             bot.api.send_message(chat_id: bot_options.chat.id, text: 'Comeback to the beginning')
