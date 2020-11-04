@@ -1,6 +1,6 @@
 # rubocop: disable Lint/BinaryOperatorWithIdenticalOperands
 require_relative '../lib/select'
-
+require 'telegram/bot'
 describe Selector do
   let(:select) { Selector.new }
 
