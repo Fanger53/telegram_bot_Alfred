@@ -38,7 +38,7 @@ class BotL
           case bot_options.text
           when 'english'
             bot.api.send_message(chat_id: bot_options.chat.id, text: "Hello, #{bot_options.from.first_name},I'm Alfred")
-            bot.api.send_message(chat_id: bot_options.chat.id, text: 'Im here to help u what food select in a fun way')
+            bot.api.send_message(chat_id: bot_options.chat.id, text: 'Im here to help u, what food select in a fun way')
             bot.api.send_message(chat_id: bot_options.chat.id, text: 'use this keyword for using me:')
             bot.api.send_message(chat_id: bot_options.chat.id, text: 'food for looking for a dish that u desire')
             bot.api.send_message(chat_id: bot_options.chat.id, text: 'inic for return to the beginning')
