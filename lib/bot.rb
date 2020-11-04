@@ -16,6 +16,8 @@ class BotL
         when 'spanish'
           bot.api.send_message(chat_id: l_options.chat.id, text: 'haz seleccionado Español')
           bot.api.send_message(chat_id: l_options.chat.id, text: " #{BotS.new}")
+        when 'inic'
+          bot.api.send_message(chat_id: l_options.chat.id, text: 'You can select aganin the language')
         when '/stop'
           key_board = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
           bot.api.send_message(chat_id: l_options.chat.id, text: 'I will go to the bed', reply_markup: key_board)
@@ -59,7 +61,11 @@ class BotL
           case bot_options.text
           when 'spanish'
             bot.api.send_message(chat_id: bot_options.chat.id, text: "Hola, #{bot_options.from.first_name}, soy alfred")
+            bot.api.send_message(chat_id: bot_options.chat.id, text: 'para ver las opciones de comida escribe food')
+            bot.api.send_message(chat_id: bot_options.chat.id, text: 'y despues escribe una de las opciones')
+            
           when 'food'
+            bot.api.send_message(chat_id: bot_options.chat.id, text: 'desayuno,almuerzo, cena u onces')
             food
           when 'inic'
             bot.api.send_message(chat_id: bot_options.chat.id, text: "volver al inicio #{BotL.new} ")
@@ -82,14 +88,22 @@ def food
     bot.listen do |message|
       case message.text
       when 'food'
-        bot.api.send_message(chat_id: message.chat.id, text: 'Select what you want to eat between breakfast, lunch, dinner, elevenses')
+        bot.api.send_message(chat_id: message.chat.id, text: '..')
       when 'breakfast'
         bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))
+      when 'desayuno'
+        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))  
       when 'lunch'
+        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.lunch))
+      when 'almuerzo'
         bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.lunch))
       when 'dinner'
         bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.dinner))
+      when 'cena'
+        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.dinner))
       when 'elevenses'
+        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.elevenses))
+      when 'onces'
         bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.elevenses))
       when 'inic'
         bot.api.send_message(chat_id: message.chat.id,text: "volver al inicio #{BotL.new} ")

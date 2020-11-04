@@ -15,6 +15,8 @@ describe Selector do
         'https://www.youtube.com/watch?v=UIl_5rpi2lI'
                                               ])
     end
+  end
+  describe '#initialize' do
     it 'It checks if the array is not equal to breakfast array' do
       expect(select.breakfast).to_not eq([
         'https://www.youtube.com/watch?v=QZK0bqfITnI',
@@ -37,6 +39,8 @@ describe Selector do
         'https://www.youtube.com/watch?v=_0yTwf3eJAA'
                                           ])
     end
+  end
+  describe '#initialize' do
     it 'It checks if the array is not equal to lunch array' do
       expect(select.lunch).to_not eq([
         'https://www.youtube.com/watch?v=MuajFTgkoHw', 
@@ -60,6 +64,8 @@ describe Selector do
               'https://www.youtube.com/watch?v=hVseiV8rbUw'
                                           ])
     end
+  end
+  describe '#initialize' do
     it 'It checks if the array is not equal to dinner array' do
       expect(select.dinner).to_not eq([
         'https://www.youtube.com/watch?v=MuajFTgkoHw', 
@@ -82,6 +88,8 @@ describe Selector do
         'https://www.youtube.com/watch?v=0TRokMB9AnI'
                                           ])
     end
+  end
+  describe '#initialize' do
     it 'It checks if the array is not equal to elevenses array' do
       expect(select.elevenses).to_not eq([
         'https://www.youtube.com/watch?v=MuajFTgkoHw',
@@ -108,5 +116,4 @@ describe Selector do
       expect(select.rand_select(select.elevenses) == select.rand_select(select.elevenses)).to be false
     end
   end
-
-end #general
+end
