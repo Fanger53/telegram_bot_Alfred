@@ -46,12 +46,19 @@ in the Bin folder run the /ruby main.rb file, after you can go to telegram and w
 you can find the bot in telegram with next name t.me/fanger53bot. after running the program you can use the next commands for use alfred_bot
 
 -/start:running the first lines of the bot
+
 -/stop: stop the bot 
+
 -food: ask for food and show another commads like breakfast, lunch, dinner and elevenses
+
 -breakfast: the bot show you a random recipe to breakfast
+
 -lunch:  the bot show you a random recipe to the lunch
+
 -dinner: the bot show you a random recipe to the dinner
+
 -elevenses: the bot show you a random recipe to the elevenses
+
 -inic: this command send u to the beginning of the bot 
 
 **Enjoy!!**
