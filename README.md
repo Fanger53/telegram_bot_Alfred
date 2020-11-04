@@ -42,7 +42,26 @@ The goals of this project are:
 
 ## 📝 Instructions
 
-in the Bin folder run the main file, after you can go to telegram and write /start in the profile of bot and it will iniziate
+in the Bin folder run the /ruby main.rb file, after you can go to telegram and write /start in the profile of bot and it will iniziate
+you can find the bot in telegram with next name t.me/fanger53bot. after running the program you can use the next commands for use alfred_bot
+
+-/start:running the first lines of the bot
+
+-/stop: stop the bot 
+
+-food: ask for food and show another commads like breakfast, lunch, dinner and elevenses
+
+-breakfast: the bot show you a random recipe to breakfast
+
+-lunch:  the bot show you a random recipe to the lunch
+
+-dinner: the bot show you a random recipe to the dinner
+
+-elevenses: the bot show you a random recipe to the elevenses
+
+-inic: this command send u to the beginning of the bot 
+
+For the use of telegram u can download it from the app store or Telegram have a web-telegram, just subscribe to telegram create an account and enjoy it "its free"
 
 **Enjoy!!**
 
@@ -106,7 +125,7 @@ To be able to test your code with Rspec, you should have Ruby and Rspec installe
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jcy2704/oop_ruby/issues).
+Feel free to check the [issues page](https://github.com/Fanger53/telegram_bot_Alfred/issues).
 
 ## ⭐ Show your support
 
