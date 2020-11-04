@@ -1,5 +1,6 @@
+# rubocop: disable Metrics/MethodLength,Metrics/CyclomaticComplexity,Metrics/AbcSize,Layout/LineLength, Metrics/BlockLength
 require 'telegram/bot'
-require_relative '../lib/select.rb'
+require_relative '../lib/select'
 # begin of class BotL
 class BotL
   def initialize
@@ -70,7 +71,6 @@ class BotL
             bot.api.send_message(chat_id: bot_options.chat.id, text: "Hola, #{bot_options.from.first_name}, soy alfred")
             bot.api.send_message(chat_id: bot_options.chat.id, text: 'para ver las opciones de comida escribe food')
             bot.api.send_message(chat_id: bot_options.chat.id, text: 'y despues escribe una de las opciones')
-            
           when 'food'
             bot.api.send_message(chat_id: bot_options.chat.id, text: 'desayuno,almuerzo, cena u onces')
             food
@@ -86,7 +86,7 @@ class BotL
       end
     end
   end
-end # fin clase botl
+end
 
 def food
   @token = '1495663141:AAFFpexoWNH-GJq1HlbIO3e3ObECgKnTeoI'
@@ -99,7 +99,7 @@ def food
       when 'breakfast'
         bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))
       when 'desayuno'
-        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))  
+        bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.breakfast))
       when 'lunch'
         bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.lunch))
       when 'almuerzo'
@@ -113,7 +113,7 @@ def food
       when 'onces'
         bot.api.send_message(chat_id: message.chat.id, text: @select.rand_select(@select.elevenses))
       when 'inic'
-        bot.api.send_message(chat_id: message.chat.id,text: "volver al inicio #{BotL.new} ")
+        bot.api.send_message(chat_id: message.chat.id, text: "volver al inicio #{BotL.new} ")
       when 'stop'
         key_board = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
         bot.api.send_message(chat_id: message.chat.id, text: 'Thanks for use my recipes', reply_markup: key_board)
@@ -123,3 +123,5 @@ def food
     end
   end
 end
+
+# rubocop: enable Metrics/MethodLength,Metrics/CyclomaticComplexity,Metrics/AbcSize,Layout/LineLength, Metrics/BlockLength
