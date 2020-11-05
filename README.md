@@ -104,9 +104,8 @@ After verifying you have ruby installed and completing the Installation section,
 To be able to test your code with Rspec, you should have Ruby and Rspec installed in your computer. To install rspec type in your terminal `gem install rspec`. After installing rspec, just got to the project folder and run `rspec` in the terminal.
 
 ###  Preview
-<img width="433" alt="screen1" src="https://user-images.githubusercontent.com/31552010/98128090-76f23300-1e85-11eb-91c9-fd146ea1ba29.png">
-<img width="430" alt="screen2" src="https://user-images.githubusercontent.com/31552010/98128167-925d3e00-1e85-11eb-8d4c-5ff7feb27f16.png">
-<img width="334" alt="screen3" src="https://user-images.githubusercontent.com/31552010/98128224-a3a64a80-1e85-11eb-97e1-c595542ce6ee.png">
+<img width="870" alt="screen1" src="https://user-images.githubusercontent.com/31552010/98182951-0c68e380-1ed5-11eb-81f4-3c7fbe9e82e6.png">
+<img width="440" alt="screen3" src="https://user-images.githubusercontent.com/31552010/98128224-a3a64a80-1e85-11eb-97e1-c595542ce6ee.png">
 
 
 **Enjoy our project!!**
