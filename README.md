@@ -105,7 +105,7 @@ To be able to test your code with Rspec, you should have Ruby and Rspec installe
 
 ###  Preview
 <img width="870" alt="screen1" src="https://user-images.githubusercontent.com/31552010/98182951-0c68e380-1ed5-11eb-81f4-3c7fbe9e82e6.png">
-<img width="440" alt="screen3" src="https://user-images.githubusercontent.com/31552010/98128224-a3a64a80-1e85-11eb-97e1-c595542ce6ee.png">
+<img width="650" alt="screen3" src="https://user-images.githubusercontent.com/31552010/98128224-a3a64a80-1e85-11eb-97e1-c595542ce6ee.png">
 
 
 **Enjoy our project!!**
